@@ -1,0 +1,144 @@
+/* Hero Container */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Itim&family=Righteous&family=Roboto+Condensed&family=Ubuntu:ital@1&display=swap");
+
+.hero_parent {
+  height: 100vh;
+  /* position: relative; */
+  left: 0;
+  right: 0;
+  background: rgb(98, 4, 250);
+  background: linear-gradient(
+    140deg,
+    rgba(98, 4, 250, 1) 14%,
+    rgba(253, 29, 29, 1) 62%,
+    rgba(252, 176, 69, 1) 99%
+  );
+  margin: auto;
+  display: flex;
+  margin-top: -65px;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero_container {
+  /* border: 1px solid white; */
+  /* background-color: black; */
+  width: 90%;
+  height: 95vh;
+  margin: auto;
+  align-items: center;
+}
+
+.socialContainer > div {
+  cursor: pointer;
+  transition: 0.2s ease-out;
+}
+.socialContainer > div:hover {
+  transform: scale(1.2);
+  transition: 0.2s ease-in;
+}
+
+/* Announcement Section */
+
+.marquee_container > div {
+  margin-right: 100px;
+}
+.marquee_container > div:nth-child(2) > p {
+  font-family: "Dancing Script", cursive;
+}
+.marquee_container > div:nth-child(3) > p {
+  font-family: "Itim", cursive;
+}
+.marquee_container > div:nth-child(4) > p {
+  font-family: "Righteous", cursive;
+}
+.marquee_container > div:nth-child(5) > p {
+  font-family: "Roboto Condensed", sans-serif;
+}
+.marquee_container > div:nth-child(6) > p {
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* Category Container */
+
+.category_container {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: auto;
+  margin-top: 50px;
+}
+.category_container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.textContainer > p:nth-child(1) {
+  background: linear-gradient(
+    140deg,
+    rgba(98, 4, 250, 1) 14%,
+    rgba(253, 29, 29, 1) 62%,
+    rgba(252, 176, 69, 1) 99%
+  );
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Adds container */
+
+.ads_card {
+  position: relative;
+  
+}
+.ads_image{
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.ads_middle{
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.ads_card:hover{
+  background-color: black;
+}
+.ads_card:hover .ads_image {
+  opacity: 0.3;
+}
+
+.ads_card:hover .ads_middle {
+  opacity: 1;
+}
+
+@media screen and (min-width: 200px) and (max-width: 430px) {
+  /* .shoesContainer > p {
+    font-size: 3em;
+  } */
+  .hero_parent {
+    height: 90vh;
+  }
+  .category_container {
+    width: 80%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 580px) {
+  .hero_container {
+    width: 100%;
+  }
+  .shoesContainer > p {
+    font-size: 80px;
+  }
+}
